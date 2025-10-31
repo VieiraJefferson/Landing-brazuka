@@ -13,13 +13,13 @@ export default function AppTypes() {
   return (
     <AnimatedGradientBackground opacity={0.35}>
       <div className="text-center">
-        <h2 className="text-4xl font-bold mb-10">Tipos de Aplicativos</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold mb-8 pt-2">Tipos de Aplicativos</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
           {types.map((t, i) => (
             <motion.div
               key={i}
               whileHover={{ scale: 1.05 }}
-              className="relative rounded-2xl overflow-hidden group border border-[#2a2a2a] aspect-square h-64"
+              className="relative rounded-[3px] overflow-hidden group border border-[#2a2a2a] w-full h-[332px]"
             >
               {t.type === "image" ? (
                 <img

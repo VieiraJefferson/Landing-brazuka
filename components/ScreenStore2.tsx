@@ -31,22 +31,22 @@ const products = [
 
 export default function ScreenStore2() {
   return (
-    <div className="h-full w-full bg-[radial-gradient(70%_50%_at_60%_10%,rgba(253,33,99,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)]">
+    <div className="h-full w-full bg-white">
       <div className="p-4">
         <div className="mb-3 flex items-center justify-between">
           <div>
-            <div className="text-lg font-semibold">Promoções</div>
-            <div className="text-xs text-white/60">Até 40% OFF</div>
+            <div className="text-lg font-semibold text-black">Promoções</div>
+            <div className="text-xs text-gray-600">Até 40% OFF</div>
           </div>
-          <Button variant="outline" className="border-white/20 text-white text-xs h-7">
+          <Button variant="outline" className="border-gray-300 text-white bg-[#1C1C1C] hover:bg-[#2C2C2C] text-xs h-7">
             Ver Tudo
           </Button>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
           {products.map((p) => (
-            <div key={p.name} className="rounded-xl border border-white/5 bg-white/5 p-3">
-              <div className="mb-2 aspect-square w-full rounded-lg overflow-hidden bg-white/10 relative">
+            <div key={p.name} className="rounded-xl border border-gray-200 bg-[#EBEBEB] p-3">
+              <div className="mb-2 aspect-square w-full rounded-lg overflow-hidden bg-gray-100 relative">
                 <img 
                   src={p.image} 
                   alt={p.name}
@@ -56,12 +56,12 @@ export default function ScreenStore2() {
                   OFF
                 </span>
               </div>
-              <div className="text-sm">{p.name}</div>
+              <div className="text-sm text-black font-medium">{p.name}</div>
               <div className="flex items-center gap-2 mt-1">
-                <div className="text-xs font-semibold">{p.price}</div>
-                <div className="text-[10px] text-white/40 line-through">{p.oldPrice}</div>
+                <div className="text-xs font-semibold text-black">{p.price}</div>
+                <div className="text-[10px] text-gray-400 line-through">{p.oldPrice}</div>
               </div>
-              <Button className="mt-2 h-8 w-full bg-[#FD2163] hover:bg-[#e31a57]">
+              <Button className="mt-2 h-8 w-full bg-[#1C1C1C] hover:bg-[#2C2C2C] text-white">
                 Comprar
               </Button>
             </div>

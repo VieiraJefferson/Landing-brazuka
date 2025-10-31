@@ -25,14 +25,14 @@ const properties = [
 
 export default function ScreenRealEstateList() {
   return (
-    <div className="h-full w-full bg-[radial-gradient(70%_50%_at_60%_10%,rgba(253,33,99,0.25),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4">
+    <div className="h-full w-full bg-[radial-gradient(70%_50%_at_60%_10%,rgba(62,162,125,0.25),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4">
       {/* Filtros */}
       <div className="mb-3 flex items-center gap-2">
         <input
           placeholder="Buscar por cidade..."
           className="w-full rounded-lg bg-white/5 px-3 py-2 text-sm outline-none placeholder:text-white/40"
         />
-        <Button variant="outline" className="border-white/20 text-white">
+        <Button variant="outline" className="border-white/20 text-white bg-[#3EA27D] hover:bg-[#358F6F]">
           Filtros
         </Button>
       </div>
@@ -55,7 +55,7 @@ export default function ScreenRealEstateList() {
               <div className="font-medium">{p.title}</div>
               <div className="text-sm text-white/60">{p.location}</div>
             </div>
-            <div className="text-sm font-semibold text-[#FD2163] shrink-0">{p.price}</div>
+            <div className="text-sm font-semibold text-[#FDFDFD] shrink-0">{p.price}</div>
           </div>
         ))}
       </div>

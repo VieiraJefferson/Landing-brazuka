@@ -76,7 +76,7 @@ export default function MockupShowcase() {
               </div>
 
               <PhoneMockup>
-                <AppChrome title={c.title}>
+                <AppChrome title={c.title} theme={c.title === "Delivery & Restaurantes" || c.title === "Lojas & E-commerce" ? "light" : "dark"}>
                   {c.screens.length > 1 ? (
                     <AutoScreenSwitcher screens={c.screens} interval={5000} />
                   ) : (

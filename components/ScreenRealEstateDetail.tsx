@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react";
 
 export default function ScreenRealEstateDetail() {
   return (
-    <div className="h-full w-full bg-[radial-gradient(80%_60%_at_50%_0%,rgba(253,33,99,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4 flex flex-col justify-between">
+    <div className="h-full w-full bg-[radial-gradient(80%_60%_at_50%_0%,rgba(62,162,125,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4 flex flex-col justify-between">
       {/* Imagem do imóvel */}
       <div>
         <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden mb-4 bg-white/10">
@@ -20,7 +20,7 @@ export default function ScreenRealEstateDetail() {
           <MapPin size={14} />
           <span>Lisboa - Centro</span>
         </div>
-        <div className="text-lg font-semibold text-[#FD2163] mb-3">€280.000</div>
+        <div className="text-lg font-semibold text-[#FDFDFD] mb-3">€280.000</div>
 
         <p className="text-sm text-white/60 mb-4">
           Apartamento moderno com 2 quartos, varanda ampla e vista para o rio.
@@ -29,7 +29,7 @@ export default function ScreenRealEstateDetail() {
       </div>
 
       <div>
-        <Button className="w-full h-10 bg-[#FD2163] hover:bg-[#e31a57] text-base">
+        <Button className="w-full h-10 bg-[#3EA27D] hover:bg-[#358F6F] text-base text-white">
           Falar com o corretor
         </Button>
       </div>

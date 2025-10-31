@@ -512,24 +512,30 @@ const translations: Record<Language, Translations> = {
 
 export function I18nProvider({ children }: I18nProviderProps) {
   const [language, setLanguageState] = useState<Language>("pt");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Load language from localStorage or browser preference
-    const savedLang = localStorage.getItem("language") as Language;
-    if (savedLang && ["pt", "en", "de"].includes(savedLang)) {
-      setLanguageState(savedLang);
-    } else {
-      // Detect browser language
-      const browserLang = navigator.language.split("-")[0];
-      if (browserLang === "en" || browserLang === "de") {
-        setLanguageState(browserLang);
+    if (typeof window !== "undefined") {
+      const savedLang = localStorage.getItem("language") as Language;
+      if (savedLang && ["pt", "en", "de"].includes(savedLang)) {
+        setLanguageState(savedLang);
+      } else {
+        // Detect browser language
+        const browserLang = navigator.language.split("-")[0];
+        if (browserLang === "en" || browserLang === "de") {
+          setLanguageState(browserLang);
+        }
       }
     }
   }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("language", lang);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("language", lang);
+    }
   };
 
   const t = (key: string): string => {

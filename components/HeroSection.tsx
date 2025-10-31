@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/lib/i18n";
-import LanguageSelector from "@/components/LanguageSelector";
 import { scrollToCTA } from "@/lib/scrollToCTA";
 
 export default function HeroSection() {
@@ -10,10 +9,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 overflow-hidden">
-      {/* Language Selector */}
-      <div className="absolute top-6 right-6 z-20">
-        <LanguageSelector />
-      </div>
       {/* 🎥 Vídeo Cloudinary otimizado com parallax sutil */}
       <motion.div
         initial={{ scale: 1.05 }}

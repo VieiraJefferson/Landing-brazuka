@@ -10,7 +10,6 @@ export default function PhoneMockup({ children, className }: PhoneMockupProps) {
   return (
     <div
       className={`relative mx-auto aspect-[9/17.67] w-full max-w-[360px] rounded-[42px] bg-gradient-to-b from-[#1c1c1c] to-[#0f0f0f] p-[4px] ${className || ""}`}
-      style={{ maxWidth: 'min(100%, 360px)', width: '100%' }}
     >
       {/* Tela */}
       <div className="relative h-full w-full overflow-hidden rounded-[38px] bg-black">

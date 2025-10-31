@@ -50,10 +50,10 @@ export default function MockupShowcase() {
   ];
 
   return (
-    <section className="relative py-24 overflow-x-hidden" style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#151513,#2A1A25,#151513)] bg-[length:300%_300%] animate-bgmove overflow-hidden" style={{ width: '100%', maxWidth: '100vw' }} />
+    <section className="relative py-24 overflow-x-hidden w-full max-w-full">
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#151513,#2A1A25,#151513)] bg-[length:300%_300%] animate-bgmove overflow-hidden w-full max-w-full" />
 
-      <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 text-center text-[#FDFDFD] overflow-x-hidden" style={{ width: '100%', maxWidth: '100vw', paddingLeft: '0.5rem', paddingRight: '0.5rem' }}>
+      <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 text-center text-[#FDFDFD] overflow-x-hidden max-w-full">
         <div className="mx-auto max-w-6xl px-2">
           <h2 className="text-4xl font-bold">{t("portfolioTitle")}</h2>
           <p className="mt-3 text-white/70">
@@ -61,7 +61,7 @@ export default function MockupShowcase() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:gap-6 md:gap-8 lg:gap-10 md:grid-cols-2 lg:grid-cols-4 mx-auto" style={{ width: 'calc(100% - 1rem)', maxWidth: 'calc(100vw - 1rem)', paddingLeft: 0, paddingRight: 0 }}>
+        <div className="mt-12 grid gap-4 sm:gap-6 md:gap-8 lg:gap-10 md:grid-cols-2 lg:grid-cols-4 mx-auto w-full max-w-full px-0">
           {cards.map((c, i) => (
             <motion.div
               key={`${c.titleKey}-${language}-${i}`}
@@ -69,8 +69,7 @@ export default function MockupShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="rounded-2xl border border-white/10 bg-black/30 p-2.5 sm:p-4 md:p-6 backdrop-blur w-full overflow-hidden"
-              style={{ maxWidth: '100%', boxSizing: 'border-box' }}
+              className="rounded-2xl border border-white/10 bg-black/30 p-2.5 sm:p-4 md:p-6 backdrop-blur w-full max-w-full overflow-hidden"
             >
               <div className="mb-5 text-left">
                 <div className="text-lg font-semibold">{t(c.titleKey)}</div>

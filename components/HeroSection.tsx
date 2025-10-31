@@ -55,7 +55,7 @@ export default function HeroSection() {
           <Button
             onClick={scrollToAppTypes}
             variant="outline"
-            className="border-[#B60238] text-[#B60238] px-8 py-6 rounded-xl"
+            className="border-[#B60238] text-[#B60238] px-8 py-6 rounded-xl text-lg"
           >
             {t("navExamples")}
           </Button>

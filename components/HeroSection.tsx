@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/lib/i18n";
 import { scrollToCTA } from "@/lib/scrollToCTA";
+import { scrollToAppTypes } from "@/lib/scrollToAppTypes";
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -52,11 +53,11 @@ export default function HeroSection() {
             {t("heroCTA")}
           </Button>
           <Button
-            onClick={scrollToCTA}
+            onClick={scrollToAppTypes}
             variant="outline"
             className="border-[#B60238] text-[#B60238] px-8 py-6 rounded-xl"
           >
-            {t("navPortfolio")}
+            {t("navExamples")}
           </Button>
         </div>
       </motion.div>

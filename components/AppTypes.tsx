@@ -34,9 +34,10 @@ export default function AppTypes() {
   ];
   
   return (
-    <AnimatedGradientBackground opacity={0.35}>
-      <div className="text-center">
-        <h2 className="text-4xl font-bold mb-8 pt-2">{t("appTypesTitle")}</h2>
+    <section id="app-types-section">
+      <AnimatedGradientBackground opacity={0.35}>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-8 pt-2">{t("appTypesTitle")}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
           {types.map((type, i) => (
             <motion.div
@@ -69,6 +70,7 @@ export default function AppTypes() {
         </div>
       </div>
     </AnimatedGradientBackground>
+    </section>
   );
 }
 

@@ -25,7 +25,7 @@ export default function ScreenRestaurant() {
   ];
   return (
     <div className="h-full w-full bg-white">
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <div className="mb-3 rounded-xl bg-gray-100 px-3 py-2 text-sm text-gray-700">
           {t("screenDeliveryTime")}
         </div>

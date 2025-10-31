@@ -35,7 +35,7 @@ export default function ScreenSalon() {
 
   return (
     <div className="h-full w-full bg-[radial-gradient(80%_50%_at_40%_0%,rgba(253,33,99,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)]">
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <div className="mb-4 rounded-xl bg-white/5 p-3">
           <div className="text-sm text-white/70">{t("screenNextAvailableSlot")}</div>
           <div className="text-lg font-semibold">{t("screenToday")}, 16:30</div>

@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="bg-[#151513] text-[#FDFDFD] overflow-x-hidden">
+    <main className="bg-[#151513] text-[#FDFDFD] overflow-x-hidden" style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
       <HeroSection />
       <HowItWorks />
       <AppTypes />

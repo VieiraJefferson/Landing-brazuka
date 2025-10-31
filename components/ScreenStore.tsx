@@ -31,7 +31,7 @@ export default function ScreenStore() {
   
   return (
     <div className="h-full w-full bg-[#FDF7ED]">
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <div className="mb-3 flex items-center gap-2">
           <input
             placeholder={t("screenSearch")}

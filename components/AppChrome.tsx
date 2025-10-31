@@ -20,7 +20,7 @@ export function AppChrome({
     <div className={cn("flex h-full w-full flex-col", isLight ? "text-black" : "text-white", className)}>
       {/* Status + header */}
       <div className={cn(
-        "px-4 pt-3 pb-2 border-b",
+        "px-3 sm:px-4 pt-3 pb-2 border-b",
         isLight 
           ? "bg-white border-gray-200" 
           : "bg-gradient-to-r from-[#1a1a1a] to-[#121212] border-white/5"

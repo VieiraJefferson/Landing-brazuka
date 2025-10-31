@@ -28,7 +28,7 @@ export default function ScreenRealEstateList() {
   const { t } = useTranslation();
   
   return (
-    <div className="h-full w-full bg-[radial-gradient(70%_50%_at_60%_10%,rgba(62,162,125,0.25),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4">
+    <div className="h-full w-full bg-[radial-gradient(70%_50%_at_60%_10%,rgba(62,162,125,0.25),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-3 sm:p-4">
       {/* Filtros */}
       <div className="mb-3 flex items-center gap-2">
         <input

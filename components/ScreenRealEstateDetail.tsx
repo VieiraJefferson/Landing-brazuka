@@ -8,7 +8,7 @@ export default function ScreenRealEstateDetail() {
   const { t } = useTranslation();
   
   return (
-    <div className="h-full w-full bg-[radial-gradient(80%_60%_at_50%_0%,rgba(62,162,125,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4 flex flex-col justify-between">
+    <div className="h-full w-full bg-[radial-gradient(80%_60%_at_50%_0%,rgba(62,162,125,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-3 sm:p-4 flex flex-col justify-between">
       {/* Imagem do imóvel */}
       <div>
         <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden mb-4 bg-white/10">

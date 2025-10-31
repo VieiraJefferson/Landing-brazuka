@@ -32,7 +32,7 @@ export default function ScreenSalon2() {
   
   return (
     <div className="h-full w-full bg-[radial-gradient(80%_50%_at_40%_0%,rgba(253,33,99,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)]">
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <div className="mb-4 rounded-xl bg-white/5 p-3">
           <div className="text-sm text-white/70 mb-1">{t("screenOurProfessionals")}</div>
           <div className="text-xs text-white/60">{t("screenChooseSpecialist")}</div>

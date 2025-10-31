@@ -35,7 +35,7 @@ export default function ScreenStore2() {
   
   return (
     <div className="h-full w-full bg-white">
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <div className="mb-3 flex items-center justify-between">
           <div>
             <div className="text-lg font-semibold text-black">{t("screenPromotions")}</div>

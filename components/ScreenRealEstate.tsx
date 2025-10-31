@@ -33,7 +33,7 @@ export default function ScreenRealEstate() {
 
   return (
     <div className="h-full w-full bg-[radial-gradient(75%_55%_at_50%_15%,rgba(62,162,125,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)]">
-      <div className="p-4 pb-6">
+      <div className="p-3 sm:p-4 pb-6">
         <div className="mb-4 flex items-center gap-2">
           <input
             placeholder={t("screenSearchProperty")}

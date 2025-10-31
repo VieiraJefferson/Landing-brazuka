@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Custom Apps for Your Business",
+  title: "SiriusDev",
   description: "Tailor-made mobile apps for restaurants, real estate, beauty salons and more",
   icons: {
     icon: [

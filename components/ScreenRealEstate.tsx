@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 
 const properties = [
   { 
@@ -36,7 +37,7 @@ export default function ScreenRealEstate() {
             className="flex-1 rounded-lg bg-white/5 px-3 py-2 text-sm outline-none placeholder:text-white/40"
           />
           <Button variant="outline" className="border-white/20 text-white bg-[#3EA27D] hover:bg-[#358F6F]">
-            🔍
+            <Search size={16} />
           </Button>
         </div>
 

@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { IoWifiOutline } from "react-icons/io5";
 
 export function AppChrome({
   title,
@@ -26,7 +27,7 @@ export function AppChrome({
       )}>
         <div className={cn("flex items-center justify-between text-xs", isLight ? "text-gray-600" : "text-white/70")}>
           <span>9:41</span>
-          <span className="tracking-widest">LTE ●●●</span>
+          <IoWifiOutline className="w-5 h-5 mr-2" />
         </div>
         <div className={cn("mt-2 text-lg font-semibold", isLight && "text-black")}>{title}</div>
       </div>

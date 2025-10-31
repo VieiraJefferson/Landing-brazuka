@@ -37,7 +37,7 @@ export default function AboutSection() {
             <Linkedin size={28} />
           </a>
           <a 
-            href="https://github.com" 
+            href="https://github.com/VieiraJefferson" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-gray-300 transition-colors duration-200"
@@ -46,7 +46,7 @@ export default function AboutSection() {
             <Github size={28} />
           </a>
           <a 
-            href="https://portifolio-jefferson-vieira.vercel.app" 
+            href="https://portifolio-jefferson-vieira.vercel.app/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-[#B60238] hover:text-[#FD2163] transition-colors duration-200"

@@ -16,7 +16,7 @@ const professionals = [
     specialty: "Escova & Alisamento", 
     rating: "4.8", 
     available: true,
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+    avatar: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761920467/ChatGPT_Image_31._Okt._2025_14_53_49_slnpi0.png"
   },
   { 
     name: "Julia Costa", 

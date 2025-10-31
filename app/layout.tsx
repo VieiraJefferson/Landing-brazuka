@@ -17,7 +17,15 @@ export const metadata: Metadata = {
   title: "Custom Apps for Your Business",
   description: "Tailor-made mobile apps for restaurants, real estate, beauty salons and more",
   icons: {
-    icon: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761938792/Logo__3_-removebg-preview_mlyoro.png",
+    icon: [
+      {
+        url: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761938792/Logo__3_-removebg-preview_mlyoro.png",
+        type: "image/png",
+        sizes: "any",
+      },
+    ],
+    shortcut: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761938792/Logo__3_-removebg-preview_mlyoro.png",
+    apple: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761938792/Logo__3_-removebg-preview_mlyoro.png",
   },
 };
 

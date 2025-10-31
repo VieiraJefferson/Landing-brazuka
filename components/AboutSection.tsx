@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Linkedin, Github, Globe } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -12,11 +13,13 @@ export default function AboutSection() {
         transition={{ duration: 0.8 }}
         className="max-w-3xl mx-auto flex flex-col items-center"
       >
-        <img
-          src="/me-profile.jpg"
-          alt="Foto do desenvolvedor"
-          className="w-32 h-32 rounded-full mb-6 border-2 border-[#B60238]"
-        />
+        <div className="w-32 h-32 rounded-full mb-6 border-2 border-white bg-white p-1">
+          <img
+            src="https://res.cloudinary.com/dpilz4p6g/image/upload/v1761042758/g8ll1tbzboofjrvwmvre.png"
+            alt="Jefferson Vieira - Desenvolvedor Fullstack"
+            className="w-full h-full rounded-full object-cover"
+          />
+        </div>
         <p className="text-gray-300 leading-relaxed mb-6">
           Sou <strong>Jefferson Vieira</strong>, desenvolvedor fullstack apaixonado
           por tecnologia e design. Crio aplicativos sob medida para pequenos
@@ -24,14 +27,32 @@ export default function AboutSection() {
           clientes e se destacar online.
         </p>
         <div className="flex gap-6 justify-center">
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[#B60238] hover:underline">
-            LinkedIn
+          <a 
+            href="https://www.linkedin.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[#0077B5] hover:text-[#005885] transition-colors duration-200"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={28} />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-[#B60238] hover:underline">
-            GitHub
+          <a 
+            href="https://github.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white hover:text-gray-300 transition-colors duration-200"
+            aria-label="GitHub"
+          >
+            <Github size={28} />
           </a>
-          <a href="https://portifolio-jefferson-vieira.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#B60238] hover:underline">
-            Portfólio
+          <a 
+            href="https://portifolio-jefferson-vieira.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[#B60238] hover:text-[#FD2163] transition-colors duration-200"
+            aria-label="Portfólio"
+          >
+            <Globe size={28} />
           </a>
         </div>
       </motion.div>

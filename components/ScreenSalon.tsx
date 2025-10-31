@@ -3,9 +3,24 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 
 const services = [
-  { name: "Corte & Styling", time: "45 min", price: "€22" },
-  { name: "Coloração", time: "90 min", price: "€49" },
-  { name: "Escova Modelada", time: "40 min", price: "€18" },
+  { 
+    name: "Corte", 
+    time: "45 min", 
+    price: "€22",
+    image: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761918231/u7539642511_Haarschnitt__Styling_--v_7_44ff04f0-8900-4d19-a47a-2284d3ae36ca_3_axwyya.png"
+  },
+  { 
+    name: "Coloração", 
+    time: "90 min", 
+    price: "€49",
+    image: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761918236/u7539642511_Haarfrbung_--v_7_6a9fa7d8-5822-428f-bf48-cb171318d3a1_3_usfggk.png"
+  },
+  { 
+    name: "Escova", 
+    time: "40 min", 
+    price: "€18",
+    image: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761918231/u7539642511_Haarfrbung_--v_7_8791ac06-257a-4f86-abf0-415099a95b5e_3_xkafjm.png"
+  },
 ];
 
 export default function ScreenSalon() {
@@ -21,15 +36,22 @@ export default function ScreenSalon() {
           {services.map((s) => (
             <div
               key={s.name}
-              className="flex items-center justify-between rounded-xl border border-white/5 bg-white/5 p-3"
+              className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/5 p-3"
             >
-              <div>
-                <div className="font-medium">{s.name}</div>
+              <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white/10">
+                <img 
+                  src={s.image} 
+                  alt={s.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 min-w-0 -mt-1">
+                <div className="text-sm font-medium -mb-0.5">{s.name}</div>
                 <div className="text-sm text-white/60">
                   {s.time} • {s.price}
                 </div>
               </div>
-              <Button className="h-8 bg-[#FD2163] hover:bg-[#e31a57]">Agendar</Button>
+              <Button className="h-7 bg-[#FD2163] hover:bg-[#e31a57] shrink-0">Agendar</Button>
             </div>
           ))}
         </div>

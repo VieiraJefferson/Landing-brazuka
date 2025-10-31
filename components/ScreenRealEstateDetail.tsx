@@ -6,9 +6,15 @@ import { MapPin } from "lucide-react";
 export default function ScreenRealEstateDetail() {
   return (
     <div className="h-full w-full bg-[radial-gradient(80%_60%_at_50%_0%,rgba(253,33,99,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4 flex flex-col justify-between">
-      {/* Imagem simulada */}
+      {/* Imagem do imóvel */}
       <div>
-        <div className="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-white/10 to-transparent mb-4" />
+        <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden mb-4 bg-white/10">
+          <img 
+            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop"
+            alt="Apartamento Central"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <h3 className="text-xl font-semibold mb-1">Apartamento Central</h3>
         <div className="flex items-center gap-1 text-sm text-white/60 mb-2">
           <MapPin size={14} />

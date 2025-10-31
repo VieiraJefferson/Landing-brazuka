@@ -3,10 +3,30 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 
 const products = [
-  { name: "Camiseta Básica", price: "€29,90", oldPrice: "€39,90" },
-  { name: "Calça Jeans", price: "€59,90", oldPrice: "€79,90" },
-  { name: "Tênis Esportivo", price: "€89,90", oldPrice: "€119,90" },
-  { name: "Jaqueta Casual", price: "€74,90", oldPrice: "€99,90" },
+  { 
+    name: "Camiseta Luz", 
+    price: "€29,90", 
+    oldPrice: "€39,90",
+    image: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761917341/u7539642511_erstelle_mir_das_bild_von_einem_t-shirt_fr_eine_S_0fba3d26-7307-4983-9a67-7ab3a468567e_1_w50tyh.png"
+  },
+  { 
+    name: "Calça Jeans", 
+    price: "€59,90", 
+    oldPrice: "€79,90",
+    image: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761917340/u7539642511_erstelle_mir_das_bild_von_einer_hose_aus_jeanssto_d3c77086-0ed8-4ff9-824e-40294ffcb700_1_1_qtbrhr.png"
+  },
+  { 
+    name: "Tênis Esportivo", 
+    price: "€89,90", 
+    oldPrice: "€119,90",
+    image: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761917358/png_1_gez4qe.png"
+  },
+  { 
+    name: "T-shirt Artsy", 
+    price: "€74,90", 
+    oldPrice: "€99,90",
+    image: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761917340/u7539642511_erstelle_mir_das_bild_von_einem_t-shirt_fr_eine_S_0fba3d26-7307-4983-9a67-7ab3a468567e_3_hsrhs2.png"
+  },
 ];
 
 export default function ScreenStore2() {
@@ -26,7 +46,12 @@ export default function ScreenStore2() {
         <div className="grid grid-cols-2 gap-3">
           {products.map((p) => (
             <div key={p.name} className="rounded-xl border border-white/5 bg-white/5 p-3">
-              <div className="mb-2 aspect-square w-full rounded-lg bg-gradient-to-br from-white/10 to-white/0 relative">
+              <div className="mb-2 aspect-square w-full rounded-lg overflow-hidden bg-white/10 relative">
+                <img 
+                  src={p.image} 
+                  alt={p.name}
+                  className="w-full h-full object-cover"
+                />
                 <span className="absolute top-1 right-1 bg-[#FD2163] text-[10px] px-1.5 py-0.5 rounded text-white font-semibold">
                   OFF
                 </span>

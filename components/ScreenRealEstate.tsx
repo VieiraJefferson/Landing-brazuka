@@ -3,9 +3,27 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 
 const properties = [
-  { name: "Apartamento Moderno", location: "Centro", price: "€245.000", rooms: "2 quartos" },
-  { name: "Casa com Jardim", location: "Subúrbio", price: "€380.000", rooms: "4 quartos" },
-  { name: "Studio Renovado", location: "Zona Histórica", price: "€125.000", rooms: "1 quarto" },
+  { 
+    name: "Apartamento Moderno", 
+    location: "Centro", 
+    price: "€245.000", 
+    rooms: "2 quartos",
+    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=300&h=300&fit=crop"
+  },
+  { 
+    name: "Casa com Jardim", 
+    location: "Subúrbio", 
+    price: "€380.000", 
+    rooms: "4 quartos",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&h=300&fit=crop"
+  },
+  { 
+    name: "Studio Renovado", 
+    location: "Zona Histórica", 
+    price: "€125.000", 
+    rooms: "1 quarto",
+    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=300&h=300&fit=crop"
+  },
 ];
 
 export default function ScreenRealEstate() {
@@ -40,7 +58,13 @@ export default function ScreenRealEstate() {
               key={p.name}
               className="flex gap-3 rounded-xl border border-white/5 bg-white/5 p-3"
             >
-              <div className="h-20 w-20 flex-shrink-0 rounded-lg bg-gradient-to-br from-white/10 to-white/0" />
+              <div className="h-20 w-20 flex-shrink-0 rounded-lg overflow-hidden bg-white/10">
+                <img 
+                  src={p.image} 
+                  alt={p.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="flex-1">
                 <div className="font-medium text-sm">{p.name}</div>
                 <div className="text-xs text-white/60 mt-1">{p.location} • {p.rooms}</div>

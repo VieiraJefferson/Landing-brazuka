@@ -36,12 +36,16 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
       const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
-      // Se não tiver variáveis de ambiente, use valores diretos (menos seguro, mas funciona)
-      const SERVICE_ID = serviceId || "YOUR_SERVICE_ID";
-      const TEMPLATE_ID = templateId || "YOUR_TEMPLATE_ID";
-      const PUBLIC_KEY = publicKey || "YOUR_PUBLIC_KEY";
+      // Validação das variáveis de ambiente
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("Configurações do EmailJS não encontradas. Verifique as variáveis de ambiente.");
+      }
 
-      await emailjs.send(
+      const SERVICE_ID = serviceId;
+      const TEMPLATE_ID = templateId;
+      const PUBLIC_KEY = publicKey;
+
+      const result = await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
@@ -53,14 +57,41 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
         PUBLIC_KEY
       );
 
+      // Verifica se o envio foi bem-sucedido
+      if (result.status !== 200) {
+        throw new Error(`Erro ao enviar: Status ${result.status}`);
+      }
+
       setLoading(false);
       alert("Mensagem enviada com sucesso! Entrarei em contato em breve.");
       setOpen(false);
       setForm({ name: "", email: "", message: "" });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error sending email:", error);
       setLoading(false);
-      alert("Erro ao enviar mensagem. Tente novamente ou entre em contato pelo WhatsApp.");
+      
+      // Mensagens de erro mais específicas
+      let errorMessage = "Erro ao enviar mensagem. ";
+      
+      if (error?.text) {
+        errorMessage += `Detalhes: ${error.text}`;
+      } else if (error?.message) {
+        errorMessage += `Erro: ${error.message}`;
+      } else {
+        errorMessage += "Verifique as configurações e tente novamente.";
+      }
+      
+      errorMessage += "\n\nSe o problema persistir, entre em contato pelo WhatsApp.";
+      
+      alert(errorMessage);
+      
+      // Log detalhado no console para debug
+      console.error("EmailJS Error Details:", {
+        serviceId: SERVICE_ID,
+        templateId: TEMPLATE_ID,
+        hasPublicKey: !!PUBLIC_KEY,
+        error: error
+      });
     }
   };
 

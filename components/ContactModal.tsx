@@ -45,9 +45,10 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
         SERVICE_ID,
         TEMPLATE_ID,
         {
-          from_name: form.name,
-          from_email: form.email,
+          name: form.name,
+          email: form.email,
           message: form.message,
+          time: new Date().toLocaleString('pt-BR'),
         },
         PUBLIC_KEY
       );

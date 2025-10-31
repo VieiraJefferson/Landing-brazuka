@@ -10,7 +10,7 @@ export default function Pricing() {
   const plans = [
     {
       nameKey: "planStarter",
-      price: "€499",
+      price: "€299",
       descKey: "planStarterDesc",
       features: [
         "featureStandardDesign",
@@ -20,7 +20,7 @@ export default function Pricing() {
     },
     {
       nameKey: "planPro",
-      price: "€899",
+      price: "€599",
       descKey: "planProDesc",
       features: [
         "featureCustomDesign",
@@ -31,7 +31,7 @@ export default function Pricing() {
     },
     {
       nameKey: "planPremium",
-      price: "€1299",
+      price: "€999",
       descKey: "planPremiumDesc",
       features: [
         "featureAppStore",

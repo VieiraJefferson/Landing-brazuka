@@ -110,6 +110,7 @@ const translations: Record<Language, Translations> = {
     
     // About
     aboutTitle: "Sobre Mim",
+    aboutDesc: "Sou <strong>Jefferson Vieira</strong>, desenvolvedor fullstack apaixonado por tecnologia e design. Crio aplicativos sob medida para pequenos negócios, ajudando empreendedores locais a vender mais, fidelizar clientes e se destacar online.",
     
     // CTA
     ctaTitle: "Pronto para Crescer?",
@@ -271,6 +272,7 @@ const translations: Record<Language, Translations> = {
     
     // About
     aboutTitle: "About Me",
+    aboutDesc: "I'm <strong>Jefferson Vieira</strong>, a fullstack developer passionate about technology and design. I create tailor-made apps for small businesses, helping local entrepreneurs sell more, retain customers, and stand out online.",
     
     // CTA
     ctaTitle: "Ready to Grow?",
@@ -432,6 +434,7 @@ const translations: Record<Language, Translations> = {
     
     // About
     aboutTitle: "Über mich",
+    aboutDesc: "Ich bin <strong>Jefferson Vieira</strong>, ein Fullstack-Entwickler, der sich für Technologie und Design begeistert. Ich erstelle maßgeschneiderte Apps für kleine Unternehmen und helfe lokalen Unternehmern dabei, mehr zu verkaufen, Kunden zu binden und online aufzufallen.",
     
     // CTA
     ctaTitle: "Bereit zu wachsen?",

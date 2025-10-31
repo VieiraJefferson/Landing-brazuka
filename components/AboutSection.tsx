@@ -1,11 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import { Linkedin, Github, Globe } from "lucide-react";
+import { useTranslation } from "@/lib/i18n";
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 px-6 bg-[#0a0a0a] text-center">
-      <h2 className="text-4xl font-bold mb-10">Sobre Mim</h2>
+      <h2 className="text-4xl font-bold mb-10">{t("aboutTitle")}</h2>
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -16,16 +19,14 @@ export default function AboutSection() {
         <div className="w-32 h-32 rounded-full mb-6 border-2 border-white bg-white p-1">
           <img
             src="https://res.cloudinary.com/dpilz4p6g/image/upload/v1761042758/g8ll1tbzboofjrvwmvre.png"
-            alt="Jefferson Vieira - Desenvolvedor Fullstack"
+            alt="Jefferson Vieira"
             className="w-full h-full rounded-full object-cover"
           />
         </div>
-        <p className="text-gray-300 leading-relaxed mb-6">
-          Sou <strong>Jefferson Vieira</strong>, desenvolvedor fullstack apaixonado
-          por tecnologia e design. Crio aplicativos sob medida para pequenos
-          negócios, ajudando empreendedores locais a vender mais, fidelizar
-          clientes e se destacar online.
-        </p>
+        <p 
+          className="text-gray-300 leading-relaxed mb-6"
+          dangerouslySetInnerHTML={{ __html: t("aboutDesc") }}
+        />
         <div className="flex gap-6 justify-center">
           <a 
             href="https://www.linkedin.com/in/jefferson-vieira-6b660b242/" 

@@ -2,10 +2,14 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { title: "Briefing rápido", desc: "Você me conta sobre o seu negócio e o que precisa." },
-  { title: "Design personalizado", desc: "Crio o layout visual do app com base na sua marca." },
-  { title: "Desenvolvimento completo", desc: "App funcional com painel de administração." },
-  { title: "Publicação e suporte", desc: "Seu app é publicado e acompanhado nas primeiras semanas." },
+  { title: "Briefing rápido", desc: "Você me conta que tipo de aplicativo precisa e quais funções ele deve ter. Juntos definimos os objetivos principais e o estilo do projeto." },
+
+  { title: "Design personalizado", desc: " Crio um design moderno e personalizado que combina com a identidade da sua marca. Você recebe prévias e pode dar feedback antes do desenvolvimento começar." },
+
+  { title: "Desenvolvimento completo", desc: "Programo o aplicativo completo — com painel administrativo, sistema de pedidos ou gestão de clientes. Tudo é testado e otimizado para o melhor desempenho." },
+
+  { title: "Publicação e suporte", desc: "Cuido da publicação nas lojas de aplicativos e acompanho você na fase inicial. Ofereço treinamento e suporte para que você possa gerenciar seu app com segurança." },
+
 ];
 
 export default function HowItWorks() {

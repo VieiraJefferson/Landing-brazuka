@@ -1,0 +1,33 @@
+"use client";
+import * as React from "react";
+import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
+
+export default function ScreenRealEstateDetail() {
+  return (
+    <div className="h-full w-full bg-[radial-gradient(80%_60%_at_50%_0%,rgba(253,33,99,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)] p-4 flex flex-col justify-between">
+      {/* Imagem simulada */}
+      <div>
+        <div className="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-white/10 to-transparent mb-4" />
+        <h3 className="text-xl font-semibold mb-1">Apartamento Central</h3>
+        <div className="flex items-center gap-1 text-sm text-white/60 mb-2">
+          <MapPin size={14} />
+          <span>Lisboa - Centro</span>
+        </div>
+        <div className="text-lg font-semibold text-[#FD2163] mb-3">€280.000</div>
+
+        <p className="text-sm text-white/60 mb-4">
+          Apartamento moderno com 2 quartos, varanda ampla e vista para o rio.
+          Localizado próximo ao metrô e áreas comerciais.
+        </p>
+      </div>
+
+      <div>
+        <Button className="w-full h-10 bg-[#FD2163] hover:bg-[#e31a57] text-base">
+          Falar com o corretor
+        </Button>
+      </div>
+    </div>
+  );
+}
+

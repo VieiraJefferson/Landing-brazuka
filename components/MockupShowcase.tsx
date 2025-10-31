@@ -10,6 +10,8 @@ import ScreenStore2 from "./ScreenStore2";
 import ScreenSalon from "./ScreenSalon";
 import ScreenSalon2 from "./ScreenSalon2";
 import ScreenRealEstate from "./ScreenRealEstate";
+import ScreenRealEstateList from "./ScreenRealEstateList";
+import ScreenRealEstateDetail from "./ScreenRealEstateDetail";
 
 export default function MockupShowcase() {
   const cards = [
@@ -37,7 +39,9 @@ export default function MockupShowcase() {
     { 
       title: "Imobiliárias", 
       screens: [
-        <ScreenRealEstate key="1" />
+        <ScreenRealEstate key="1" />,
+        <ScreenRealEstateList key="2" />,
+        <ScreenRealEstateDetail key="3" />
       ]
     },
   ];

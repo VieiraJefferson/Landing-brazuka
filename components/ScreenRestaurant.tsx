@@ -1,8 +1,11 @@
 "use client";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n";
 
 export default function ScreenRestaurant() {
+  const { t } = useTranslation();
+  
   const items = [
     { 
       name: "Burger da Casa", 
@@ -24,9 +27,9 @@ export default function ScreenRestaurant() {
     <div className="h-full w-full bg-white">
       <div className="p-4">
         <div className="mb-3 rounded-xl bg-gray-100 px-3 py-2 text-sm text-gray-700">
-          Entrega em ~ 25 min • Frete: €1,90
+          {t("screenDeliveryTime")}
         </div>
-        <div className="mb-4 text-xl font-semibold text-black">Destaques</div>
+        <div className="mb-4 text-xl font-semibold text-black">{t("screenHighlights")}</div>
 
         <div className="space-y-3">
           {items.map((it) => (
@@ -46,18 +49,18 @@ export default function ScreenRestaurant() {
                 <div className="text-sm text-gray-600">{it.price}</div>
               </div>
               <Button className="bg-[#FF0033] hover:bg-[#CC0026] h-8 px-3 shrink-0 text-white">
-                Adicionar
+                {t("screenAdd")}
               </Button>
             </div>
           ))}
         </div>
 
         <div className="mt-5 rounded-xl bg-gray-100 p-3">
-          <div className="mb-2 text-sm text-gray-700">Cupom do dia</div>
+          <div className="mb-2 text-sm text-gray-700">{t("screenCouponOfDay")}</div>
           <div className="flex items-center justify-between">
             <div className="text-lg font-semibold text-black">APP10</div>
             <Button className="h-8 bg-[#FF0033] hover:bg-[#CC0026] text-white">
-              Usar
+              {t("screenUse")}
             </Button>
           </div>
         </div>

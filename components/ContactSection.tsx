@@ -4,23 +4,28 @@ import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { ImWhatsapp } from "react-icons/im";
 import ContactModal from "./ContactModal";
+import { useTranslation } from "@/lib/i18n";
 
 export default function ContactSection() {
+  const { t, language } = useTranslation();
   const [open, setOpen] = useState(false);
-
   const whatsappNumber = "351965898953"; // substitua pelo seu número (sem +)
   const whatsappMsg = encodeURIComponent(
-    "Olá! Vi o seu site e quero saber mais sobre apps para o meu negócio."
+    language === "pt" 
+      ? "Olá! Vi o seu site e quero saber mais sobre apps para o meu negócio."
+      : language === "en"
+      ? "Hello! I saw your website and want to know more about apps for my business."
+      : "Hallo! Ich habe Ihre Website gesehen und möchte mehr über Apps für mein Unternehmen erfahren."
   );
 
   return (
-    <section className="relative py-24 text-center text-[#FDFDFD] bg-[#0c0c0c]">
+    <section id="cta-section" className="relative py-24 text-center text-[#FDFDFD] bg-[#0c0c0c]">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#151513,#2A1A25,#151513)] bg-[length:300%_300%] animate-bgmove" />
 
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-4">Vamos criar o seu app juntos</h2>
+        <h2 className="text-4xl font-bold mb-4">{t("ctaTitle")}</h2>
         <p className="text-white/70 mb-10">
-          Entre em contato e receba um orçamento personalizado em minutos.
+          {t("ctaSubtitle")}
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -31,7 +36,7 @@ export default function ContactSection() {
             }
           >
             <ImWhatsapp className="w-5 h-5" />
-            Falar no WhatsApp
+            WhatsApp
           </Button>
 
           <Button
@@ -40,7 +45,7 @@ export default function ContactSection() {
             onClick={() => setOpen(true)}
           >
             <Mail className="w-5 h-5" />
-            Enviar e-mail
+            {t("contactSend")}
           </Button>
         </div>
       </div>

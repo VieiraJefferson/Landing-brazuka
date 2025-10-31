@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "@/lib/i18n";
 
 interface ContactModalProps {
   open: boolean;
@@ -19,6 +20,7 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ open, setOpen }: ContactModalProps) {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
@@ -59,7 +61,7 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
       }
 
       setLoading(false);
-      alert("Mensagem enviada com sucesso! Entrarei em contato em breve.");
+      alert(t("contactSuccess"));
       setOpen(false);
       setForm({ name: "", email: "", message: "" });
     } catch (error: any) {
@@ -95,15 +97,15 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="bg-[#151513] border border-white/10 text-white max-w-md">
         <DialogHeader>
-          <DialogTitle>Enviar e-mail</DialogTitle>
+          <DialogTitle>{t("contactTitle")}</DialogTitle>
           <DialogDescription className="text-white/60">
-            Preencha o formulário e retornarei o mais breve possível.
+            {t("contactDesc")}
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-3 mt-4">
           <Input
-            placeholder="Seu nome"
+            placeholder={t("contactName")}
             name="name"
             value={form.name}
             onChange={handleChange}
@@ -111,7 +113,7 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
             className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
           />
           <Input
-            placeholder="Seu e-mail"
+            placeholder={t("contactEmail")}
             name="email"
             type="email"
             value={form.email}
@@ -120,7 +122,7 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
             className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
           />
           <Textarea
-            placeholder="Escreva sua mensagem..."
+            placeholder={t("contactMessage")}
             name="message"
             value={form.message}
             onChange={handleChange}
@@ -134,7 +136,7 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
               className="w-full bg-[#FD2163] hover:bg-[#e31a57]"
               disabled={loading}
             >
-              {loading ? "Enviando..." : "Enviar mensagem"}
+              {loading ? t("contactSending") : t("contactSend")}
             </Button>
           </DialogFooter>
         </form>

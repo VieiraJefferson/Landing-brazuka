@@ -12,32 +12,35 @@ import ScreenSalon2 from "./ScreenSalon2";
 import ScreenRealEstate from "./ScreenRealEstate";
 import ScreenRealEstateList from "./ScreenRealEstateList";
 import ScreenRealEstateDetail from "./ScreenRealEstateDetail";
+import { useTranslation } from "@/lib/i18n";
 
 export default function MockupShowcase() {
+  const { t, language } = useTranslation();
+
   const cards = [
     { 
-      title: "Delivery & Restaurantes", 
+      titleKey: "portfolioDelivery",
       screens: [
         <ScreenRestaurant key="1" />,
         <ScreenRestaurant2 key="2" />
       ]
     },
     { 
-      title: "Lojas & E-commerce", 
+      titleKey: "portfolioStore",
       screens: [
         <ScreenStore key="1" />,
         <ScreenStore2 key="2" />
       ]
     },
     { 
-      title: "Salões & Clínicas", 
+      titleKey: "portfolioSalon",
       screens: [
         <ScreenSalon key="1" />,
         <ScreenSalon2 key="2" />
       ]
     },
     { 
-      title: "Imobiliárias", 
+      titleKey: "portfolioRealEstate",
       screens: [
         <ScreenRealEstate key="1" />,
         <ScreenRealEstateList key="2" />,
@@ -52,16 +55,16 @@ export default function MockupShowcase() {
 
       <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 text-center text-[#FDFDFD]">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold">Veja o potencial do seu app</h2>
+          <h2 className="text-4xl font-bold">{t("portfolioTitle")}</h2>
           <p className="mt-3 text-white/70">
-            Mockups funcionais (em código) que mostram a experiência real no celular.
+            {t("portfolioSubtitle")}
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 md:gap-8 lg:gap-10 md:grid-cols-2 lg:grid-cols-4 w-full max-w-[1920px] mx-auto">
           {cards.map((c, i) => (
             <motion.div
-              key={c.title}
+              key={`${c.titleKey}-${language}-${i}`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
@@ -69,14 +72,14 @@ export default function MockupShowcase() {
               className="rounded-2xl border border-white/10 bg-black/30 p-4 md:p-6 backdrop-blur w-full"
             >
               <div className="mb-5 text-left">
-                <div className="text-lg font-semibold">{c.title}</div>
+                <div className="text-lg font-semibold">{t(c.titleKey)}</div>
                 <div className="text-sm text-white/60">
-                  UI moderna, fluida e pensada para conversão.
+                  {t("portfolioDesc")}
                 </div>
               </div>
 
               <PhoneMockup>
-                <AppChrome title={c.title} theme={c.title === "Delivery & Restaurantes" || c.title === "Lojas & E-commerce" ? "light" : "dark"}>
+                <AppChrome title={t(c.titleKey)} theme={c.titleKey === "portfolioDelivery" || c.titleKey === "portfolioStore" ? "light" : "dark"}>
                   {c.screens.length > 1 ? (
                     <AutoScreenSwitcher screens={c.screens} interval={5000} />
                   ) : (

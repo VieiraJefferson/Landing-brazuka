@@ -1,10 +1,19 @@
 "use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n";
+import LanguageSelector from "@/components/LanguageSelector";
+import { scrollToCTA } from "@/lib/scrollToCTA";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 overflow-hidden">
+      {/* Language Selector */}
+      <div className="absolute top-6 right-6 z-20">
+        <LanguageSelector />
+      </div>
       {/* 🎥 Vídeo Cloudinary otimizado com parallax sutil */}
       <motion.div
         initial={{ scale: 1.05 }}
@@ -33,24 +42,26 @@ export default function HeroSection() {
         className="relative z-10 max-w-3xl"
       >
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Transforme o seu negócio em um{" "}
-          <span className="text-[#B60238]">app moderno e lucrativo</span>
+          {t("heroTitle")}
         </h1>
 
         <p className="mt-4 text-lg text-gray-300">
-          Aplicativos personalizados para pequenos negócios — restaurantes,
-          lojas, salões, imobiliárias e muito mais.
+          {t("heroSubtitle")}
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="bg-[#B60238] hover:bg-[#9a0229] text-white text-lg px-8 py-6 rounded-xl">
-            Solicitar orçamento
+          <Button 
+            onClick={scrollToCTA}
+            className="bg-[#B60238] hover:bg-[#9a0229] text-white text-lg px-8 py-6 rounded-xl"
+          >
+            {t("heroCTA")}
           </Button>
           <Button
+            onClick={scrollToCTA}
             variant="outline"
             className="border-[#B60238] text-[#B60238] px-8 py-6 rounded-xl"
           >
-            Ver exemplos
+            {t("navPortfolio")}
           </Button>
         </div>
       </motion.div>

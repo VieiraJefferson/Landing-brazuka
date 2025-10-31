@@ -1,8 +1,11 @@
 "use client";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n";
 
 export default function ScreenRestaurant2() {
+  const { t } = useTranslation();
+  
   const items = [
     { 
       name: "Pizza Margherita", 
@@ -27,9 +30,9 @@ export default function ScreenRestaurant2() {
     <div className="h-full w-full bg-white">
       <div className="p-4">
         <div className="mb-3 rounded-xl bg-gray-100 px-3 py-2 text-sm text-gray-700">
-          ⭐ Restaurante avaliado 4.9 • Entrega grátis acima de €20
+          {t("screenRestaurantRated")}
         </div>
-        <div className="mb-4 text-xl font-semibold text-black">Mais Pedidos</div>
+        <div className="mb-4 text-xl font-semibold text-black">{t("screenMostOrdered")}</div>
 
         <div className="space-y-3">
           {items.map((it) => (
@@ -52,15 +55,15 @@ export default function ScreenRestaurant2() {
                 <div className="text-lg font-semibold shrink-0 text-black">{it.price}</div>
               </div>
               <Button className="w-full bg-[#FF0033] hover:bg-[#CC0026] h-8 text-white">
-                Adicionar ao Carrinho
+                {t("screenAddToCart")}
               </Button>
             </div>
           ))}
         </div>
 
         <div className="mt-5 rounded-xl bg-red-50 border border-red-200 p-3">
-          <div className="text-sm font-semibold mb-1 text-black">Frete Grátis!</div>
-          <div className="text-xs text-gray-700">Adicione mais €5,10 para ganhar frete grátis</div>
+          <div className="text-sm font-semibold mb-1 text-black">{t("screenFreeShipping")}</div>
+          <div className="text-xs text-gray-700">{t("screenAddMoreForFreeShipping")}</div>
         </div>
       </div>
     </div>

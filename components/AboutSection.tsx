@@ -28,7 +28,7 @@ export default function AboutSection() {
         </p>
         <div className="flex gap-6 justify-center">
           <a 
-            href="https://www.linkedin.com" 
+            href="https://www.linkedin.com/in/jefferson-vieira-6b660b242/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-[#0077B5] hover:text-[#005885] transition-colors duration-200"

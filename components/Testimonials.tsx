@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/lib/i18n";
 
 const testimonials = [
   {
@@ -23,9 +24,11 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-24 px-6 text-center">
-      <h2 className="text-4xl font-bold mb-10">Depoimentos</h2>
+      <h2 className="text-4xl font-bold mb-10">{t("testimonialsTitle")}</h2>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {testimonials.map((t, i) => (

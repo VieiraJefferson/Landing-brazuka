@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n";
 
 const products = [
   { 
@@ -26,16 +27,18 @@ const products = [
 ];
 
 export default function ScreenStore() {
+  const { t } = useTranslation();
+  
   return (
     <div className="h-full w-full bg-[#FDF7ED]">
       <div className="p-4">
         <div className="mb-3 flex items-center gap-2">
           <input
-            placeholder="Buscar..."
+            placeholder={t("screenSearch")}
             className="w-full rounded-lg bg-[#FBEFDA] px-3 py-2 text-sm outline-none placeholder:text-gray-400 border border-gray-200"
           />
           <Button variant="outline" className="border-gray-300 text-white bg-[#1C1C1C] hover:bg-[#2C2C2C]">
-            Filtros
+            {t("screenFilters")}
           </Button>
         </div>
 
@@ -52,7 +55,7 @@ export default function ScreenStore() {
               <div className="text-sm text-black font-medium">{p.name}</div>
               <div className="text-xs text-gray-600">{p.price}</div>
               <Button className="mt-2 h-8 w-full bg-[#1C1C1C] hover:bg-[#2C2C2C] text-white">
-                Comprar
+                {t("screenBuy")}
               </Button>
             </div>
           ))}

@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n";
 
 const professionals = [
   { 
@@ -27,12 +28,14 @@ const professionals = [
 ];
 
 export default function ScreenSalon2() {
+  const { t } = useTranslation();
+  
   return (
     <div className="h-full w-full bg-[radial-gradient(80%_50%_at_40%_0%,rgba(253,33,99,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)]">
       <div className="p-4">
         <div className="mb-4 rounded-xl bg-white/5 p-3">
-          <div className="text-sm text-white/70 mb-1">Nossos Profissionais</div>
-          <div className="text-xs text-white/60">Escolha seu especialista favorito</div>
+          <div className="text-sm text-white/70 mb-1">{t("screenOurProfessionals")}</div>
+          <div className="text-xs text-white/60">{t("screenChooseSpecialist")}</div>
         </div>
 
         <div className="space-y-3">
@@ -59,16 +62,16 @@ export default function ScreenSalon2() {
                 }`}
                 disabled={!p.available}
               >
-                {p.available ? "Agendar" : "Indisponível"}
+                {p.available ? t("screenSchedule") : t("screenUnavailable")}
               </Button>
             </div>
           ))}
         </div>
 
         <div className="mt-5 rounded-xl bg-white/5 p-3">
-          <div className="text-xs text-white/70 mb-2">Avaliações Recentes</div>
-          <div className="text-sm">"Atendimento excelente! ⭐⭐⭐⭐⭐"</div>
-          <div className="text-xs text-white/60 mt-1">- Cliente satisfeito</div>
+          <div className="text-xs text-white/70 mb-2">{t("screenRecentReviews")}</div>
+          <div className="text-sm">{t("screenExcellentService")}</div>
+          <div className="text-xs text-white/60 mt-1">{t("screenHappyClient")}</div>
         </div>
       </div>
     </div>

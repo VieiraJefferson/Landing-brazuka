@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n";
 
 const products = [
   { 
@@ -30,16 +31,18 @@ const products = [
 ];
 
 export default function ScreenStore2() {
+  const { t } = useTranslation();
+  
   return (
     <div className="h-full w-full bg-white">
       <div className="p-4">
         <div className="mb-3 flex items-center justify-between">
           <div>
-            <div className="text-lg font-semibold text-black">Promoções</div>
-            <div className="text-xs text-gray-600">Até 40% OFF</div>
+            <div className="text-lg font-semibold text-black">{t("screenPromotions")}</div>
+            <div className="text-xs text-gray-600">{t("screenUpToOff")}</div>
           </div>
           <Button variant="outline" className="border-gray-300 text-white bg-[#1C1C1C] hover:bg-[#2C2C2C] text-xs h-7">
-            Ver Tudo
+            {t("screenSeeAll")}
           </Button>
         </div>
 
@@ -53,7 +56,7 @@ export default function ScreenStore2() {
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute top-1 right-1 bg-[#FD2163] text-[10px] px-1.5 py-0.5 rounded text-white font-semibold">
-                  OFF
+                  {t("screenOff")}
                 </span>
               </div>
               <div className="text-sm text-black font-medium">{p.name}</div>
@@ -62,7 +65,7 @@ export default function ScreenStore2() {
                 <div className="text-[10px] text-gray-400 line-through">{p.oldPrice}</div>
               </div>
               <Button className="mt-2 h-8 w-full bg-[#1C1C1C] hover:bg-[#2C2C2C] text-white">
-                Comprar
+                {t("screenBuy")}
               </Button>
             </div>
           ))}

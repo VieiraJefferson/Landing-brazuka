@@ -30,31 +30,27 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      // Configurações do EmailJS - substitua pelas suas credenciais
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
+    // Configurações do EmailJS - substitua pelas suas credenciais
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
+    try {
       // Validação das variáveis de ambiente
       if (!serviceId || !templateId || !publicKey) {
         throw new Error("Configurações do EmailJS não encontradas. Verifique as variáveis de ambiente.");
       }
 
-      const SERVICE_ID = serviceId;
-      const TEMPLATE_ID = templateId;
-      const PUBLIC_KEY = publicKey;
-
       const result = await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           name: form.name,
           email: form.email,
           message: form.message,
           time: new Date().toLocaleString('pt-BR'),
         },
-        PUBLIC_KEY
+        publicKey
       );
 
       // Verifica se o envio foi bem-sucedido
@@ -87,9 +83,9 @@ export default function ContactModal({ open, setOpen }: ContactModalProps) {
       
       // Log detalhado no console para debug
       console.error("EmailJS Error Details:", {
-        serviceId: SERVICE_ID,
-        templateId: TEMPLATE_ID,
-        hasPublicKey: !!PUBLIC_KEY,
+        serviceId: serviceId,
+        templateId: templateId,
+        hasPublicKey: !!publicKey,
         error: error
       });
     }

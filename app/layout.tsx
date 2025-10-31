@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Custom Apps for Your Business",
   description: "Tailor-made mobile apps for restaurants, real estate, beauty salons and more",
+  icons: {
+    icon: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761938792/Logo__3_-removebg-preview_mlyoro.png",
+  },
 };
 
 export default function RootLayout({

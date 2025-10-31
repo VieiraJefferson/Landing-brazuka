@@ -30,7 +30,7 @@ const properties = [
 export default function ScreenRealEstate() {
   return (
     <div className="h-full w-full bg-[radial-gradient(75%_55%_at_50%_15%,rgba(62,162,125,0.2),transparent),linear-gradient(#0c0c0c,#0c0c0c)]">
-      <div className="p-4">
+      <div className="p-4 pb-6">
         <div className="mb-4 flex items-center gap-2">
           <input
             placeholder="Buscar imóvel..."
@@ -53,13 +53,13 @@ export default function ScreenRealEstate() {
           </div>
         </div>
 
-        <div className="space-y-3">
-          {properties.map((p) => (
+        <div className="space-y-2">
+          {properties.slice(0, 2).map((p) => (
             <div
               key={p.name}
-              className="flex gap-3 rounded-xl border border-white/5 bg-white/5 p-3"
+              className="flex gap-2 rounded-xl border border-white/5 bg-white/5 p-2"
             >
-              <div className="h-20 w-20 flex-shrink-0 rounded-lg overflow-hidden bg-white/10">
+              <div className="h-16 w-16 flex-shrink-0 rounded-lg overflow-hidden bg-white/10">
                 <img 
                   src={p.image} 
                   alt={p.name}
@@ -67,11 +67,11 @@ export default function ScreenRealEstate() {
                 />
               </div>
               <div className="flex-1">
-                <div className="font-medium text-sm">{p.name}</div>
-                <div className="text-xs text-white/60 mt-1">{p.location} • {p.rooms}</div>
-                <div className="flex items-center justify-between mt-2">
-                  <div className="text-lg font-semibold text-[#FDFDFD]">{p.price}</div>
-                  <Button className="h-7 px-3 bg-[#3EA27D] hover:bg-[#358F6F] text-xs text-white">
+                <div className="font-medium text-xs">{p.name}</div>
+                <div className="text-[10px] text-white/60 mt-0.5">{p.location} • {p.rooms}</div>
+                <div className="flex items-center justify-between mt-1.5">
+                  <div className="text-sm font-semibold text-[#FDFDFD]">{p.price}</div>
+                  <Button className="h-6 px-2 bg-[#3EA27D] hover:bg-[#358F6F] text-[10px] text-white">
                     Ver
                   </Button>
                 </div>
@@ -80,9 +80,9 @@ export default function ScreenRealEstate() {
           ))}
         </div>
 
-        <div className="mt-5 rounded-xl bg-white/5 p-3 text-center">
-          <div className="text-xs text-white/70">Agendar visita</div>
-          <Button className="mt-2 h-9 w-full bg-[#3EA27D] hover:bg-[#358F6F] text-white">
+        <div className="mt-3 rounded-xl bg-white/5 p-3 text-center">
+          <div className="text-xs text-white/70 mb-2">Agendar visita</div>
+          <Button className="h-8 w-full bg-[#3EA27D] hover:bg-[#358F6F] text-white text-sm">
             Contatar Agente
           </Button>
         </div>

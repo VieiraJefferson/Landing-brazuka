@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import AppTypes from "@/components/AppTypes";
 import Benefits from "@/components/Benefits";
 import Portfolio from "@/components/Portfolio";
+import BusinessTypesSection from "@/components/BusinessTypesSection";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import AboutSection from "@/components/AboutSection";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <AppTypes />
       <Benefits />
       <Portfolio />
+      <BusinessTypesSection />
       <Pricing />
       <Testimonials />
       <AboutSection />

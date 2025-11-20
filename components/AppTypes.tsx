@@ -40,7 +40,7 @@ export default function AppTypes() {
       descKey: "appTypeStoreDesc",
       img: "https://res.cloudinary.com/dpilz4p6g/image/upload/v1761851461/u7539642511_a_floating_smartphone_displaying_a_fashion_e-comm_ac7cf516-37b3-4b3a-9f96-209be0ae9158_3_bgsxxl.png", 
       type: "image",
-      route: null // Store não tem página ainda
+      route: "/store"
     },
   ];
 

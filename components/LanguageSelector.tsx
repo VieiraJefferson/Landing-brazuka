@@ -36,7 +36,7 @@ export default function LanguageSelector() {
   }, [isOpen]);
 
   const languages = [
-    { code: "pt" as const, name: "PT", flag: "🇧🇷" },
+    { code: "pt" as const, name: "PT", flag: "🇵🇹" },
     { code: "en" as const, name: "EN", flag: "🇬🇧" },
     { code: "de" as const, name: "DE", flag: "🇩🇪" },
   ];

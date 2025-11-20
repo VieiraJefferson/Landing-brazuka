@@ -89,9 +89,9 @@ export default function AppTypes() {
   };
   
   return (
-    <section id="app-types-section" className="py-24">
+    <section id="app-types-section" className="py-24 relative z-50" style={{ overflow: 'visible' }}>
       <AnimatedGradientBackground opacity={0.35}>
-        <div className="text-center">
+        <div className="text-center" style={{ overflow: 'visible' }}>
           <h2 className="text-4xl font-bold mb-8 pt-2">{t("appTypesTitle")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 mb-12">
             {types.map((type, i) => (
@@ -126,48 +126,40 @@ export default function AppTypes() {
           </div>
           
           {/* More Options Select */}
-          <div className="max-w-md mx-auto px-4">
-            <div className="relative" ref={dropdownRef}>
-              <Button
-                variant="outline"
-                onClick={() => setIsMoreOpen(!isMoreOpen)}
-                onTouchEnd={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setIsMoreOpen(!isMoreOpen);
-                }}
-                className="w-full border-[#2a2a2a] bg-[#151513] hover:bg-[#1a1a1a] text-white text-lg py-6 flex items-center justify-between touch-manipulation"
-                style={{ WebkitTapHighlightColor: 'transparent' }}
-              >
-                <span>{t("appTypesMore")}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMoreOpen ? 'rotate-180' : ''}`} />
-              </Button>
-              
-              {isMoreOpen && (
-                <div className="absolute top-full mt-2 w-full bg-[#151513] border border-[#2a2a2a] rounded-lg shadow-lg z-[10000] overflow-hidden">
-                  {moreTypes.map((type, idx) => (
-                    <button
-                      key={idx}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleMoreClick(type.route);
-                      }}
-                      onTouchEnd={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleMoreClick(type.route);
-                      }}
-                      className="w-full text-left px-4 py-3 text-sm active:bg-white/20 transition-colors flex flex-col gap-1 hover:bg-white/10 border-b border-[#2a2a2a] last:border-b-0 touch-manipulation"
-                      style={{ WebkitTapHighlightColor: 'transparent' }}
-                    >
-                      <span className="font-semibold text-white">{t(type.nameKey)}</span>
-                      <span className="text-white/70 text-xs">{t(type.descKey)}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+          <div className="max-w-md mx-auto px-4 relative" ref={dropdownRef}>
+            <Button
+              variant="outline"
+              onClick={() => setIsMoreOpen(!isMoreOpen)}
+              className="w-full border-[#2a2a2a] bg-[#151513] hover:bg-[#1a1a1a] text-white text-lg py-6 flex items-center justify-between touch-manipulation"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+              <span>{t("appTypesMore")}</span>
+              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMoreOpen ? 'rotate-180' : ''}`} />
+            </Button>
+            
+            {isMoreOpen && (
+              <div className="absolute top-full mt-2 w-full bg-[#151513] border border-[#2a2a2a] rounded-lg shadow-2xl overflow-hidden z-[99999]">
+                {moreTypes.map((type, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleMoreClick(type.route);
+                    }}
+                    onTouchEnd={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleMoreClick(type.route);
+                    }}
+                    className="w-full text-left px-4 py-3 text-sm active:bg-white/20 transition-colors hover:bg-white/10 border-b border-[#2a2a2a] last:border-b-0 touch-manipulation"
+                    style={{ WebkitTapHighlightColor: 'transparent' }}
+                  >
+                    <span className="font-semibold text-white">{t(type.nameKey)}</span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </AnimatedGradientBackground>

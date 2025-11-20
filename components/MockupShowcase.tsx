@@ -54,8 +54,8 @@ export default function MockupShowcase() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#151513,#2A1A25,#151513)] bg-[length:300%_300%] animate-bgmove overflow-hidden w-full max-w-full" />
 
       <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 text-center text-[#FDFDFD] overflow-x-hidden max-w-full">
-        <div className="mx-auto max-w-6xl px-2">
-          <h2 className="text-4xl font-bold">{t("portfolioTitle")}</h2>
+        <div className="mx-auto max-w-6xl px-2 relative" style={{ transform: 'translateZ(0)' }}>
+          <h2 className="text-4xl font-bold" style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>{t("portfolioTitle")}</h2>
           <p className="mt-3 text-white/70">
             {t("portfolioSubtitle")}
           </p>

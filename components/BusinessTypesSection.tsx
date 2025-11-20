@@ -8,7 +8,8 @@ import {
   Scissors, 
   Wrench,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  UserCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -53,6 +54,15 @@ export default function BusinessTypesSection() {
       route: "/it-support",
       color: "from-green-500/20 to-emerald-500/20",
       iconColor: "text-green-400"
+    },
+    {
+      id: "barbershop",
+      icon: UserCircle,
+      titleKey: "appTypeBarbershop",
+      descKey: "appTypeBarbershopDesc",
+      route: "/barbershop",
+      color: "from-amber-500/20 to-yellow-500/20",
+      iconColor: "text-amber-400"
     }
   ];
 
@@ -78,7 +88,7 @@ export default function BusinessTypesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {businessTypes.map((business, i) => {
             const Icon = business.icon;
             return (

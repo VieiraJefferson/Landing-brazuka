@@ -1,30 +1,25 @@
 "use client";
 import { motion } from "framer-motion";
 import { 
-  Home, 
-  Map, 
-  Brain, 
-  Calculator, 
-  Bell, 
-  User, 
+  Scissors, 
   Calendar, 
+  User, 
+  ClipboardList, 
+  Gift, 
+  Camera, 
+  Bell,
+  Package,
+  CreditCard,
+  MapPin,
   BarChart3,
-  Users,
-  FileText,
   MessageSquare,
-  Building2,
-  Award,
-  Search,
-  Filter,
-  Camera,
-  Video,
-  Layers,
-  TrendingUp,
-  Shield,
-  ShoppingBag,
-  Star,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  TrendingUp,
+  Brain,
+  Award,
+  Star,
+  Users
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -33,80 +28,80 @@ import { useTranslation } from "@/lib/i18n";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function RealEstatePage() {
+export default function BarbershopPage() {
   const { t } = useTranslation();
 
   const features = [
     {
-      icon: Home,
-      titleKey: "realEstateFeature1Title",
-      descKey: "realEstateFeature1Desc",
-      highlights: ["realEstateFeature1H1", "realEstateFeature1H2", "realEstateFeature1H3", "realEstateFeature1H4", "realEstateFeature1H5"]
-    },
-    {
-      icon: Map,
-      titleKey: "realEstateFeature2Title",
-      descKey: "realEstateFeature2Desc",
-      highlights: ["realEstateFeature2H1", "realEstateFeature2H2", "realEstateFeature2H3", "realEstateFeature2H4"]
-    },
-    {
-      icon: Brain,
-      titleKey: "realEstateFeature3Title",
-      descKey: "realEstateFeature3Desc",
-      highlights: ["realEstateFeature3H1", "realEstateFeature3H2", "realEstateFeature3H3", "realEstateFeature3H4"]
-    },
-    {
-      icon: Calculator,
-      titleKey: "realEstateFeature4Title",
-      descKey: "realEstateFeature4Desc",
-      highlights: ["realEstateFeature4H1", "realEstateFeature4H2", "realEstateFeature4H3", "realEstateFeature4H4"]
-    },
-    {
-      icon: Bell,
-      titleKey: "realEstateFeature5Title",
-      descKey: "realEstateFeature5Desc",
-      highlights: ["realEstateFeature5H1", "realEstateFeature5H2", "realEstateFeature5H3", "realEstateFeature5H4"]
+      icon: Calendar,
+      titleKey: "barbershopFeature1Title",
+      descKey: "barbershopFeature1Desc",
+      highlights: ["barbershopFeature1H1", "barbershopFeature1H2", "barbershopFeature1H3", "barbershopFeature1H4", "barbershopFeature1H5"]
     },
     {
       icon: User,
-      titleKey: "realEstateFeature6Title",
-      descKey: "realEstateFeature6Desc",
-      highlights: ["realEstateFeature6H1", "realEstateFeature6H2", "realEstateFeature6H3", "realEstateFeature6H4"]
+      titleKey: "barbershopFeature2Title",
+      descKey: "barbershopFeature2Desc",
+      highlights: ["barbershopFeature2H1", "barbershopFeature2H2", "barbershopFeature2H3", "barbershopFeature2H4"]
     },
     {
-      icon: Calendar,
-      titleKey: "realEstateFeature7Title",
-      descKey: "realEstateFeature7Desc",
-      highlights: ["realEstateFeature7H1", "realEstateFeature7H2", "realEstateFeature7H3", "realEstateFeature7H4"]
+      icon: ClipboardList,
+      titleKey: "barbershopFeature3Title",
+      descKey: "barbershopFeature3Desc",
+      highlights: ["barbershopFeature3H1", "barbershopFeature3H2", "barbershopFeature3H3", "barbershopFeature3H4"]
     },
     {
-      icon: BarChart3,
-      titleKey: "realEstateFeature8Title",
-      descKey: "realEstateFeature8Desc",
-      highlights: ["realEstateFeature8H1", "realEstateFeature8H2", "realEstateFeature8H3", "realEstateFeature8H4"]
+      icon: User,
+      titleKey: "barbershopFeature4Title",
+      descKey: "barbershopFeature4Desc",
+      highlights: ["barbershopFeature4H1", "barbershopFeature4H2", "barbershopFeature4H3", "barbershopFeature4H4"]
+    },
+    {
+      icon: Gift,
+      titleKey: "barbershopFeature5Title",
+      descKey: "barbershopFeature5Desc",
+      highlights: ["barbershopFeature5H1", "barbershopFeature5H2", "barbershopFeature5H3", "barbershopFeature5H4"]
+    },
+    {
+      icon: Camera,
+      titleKey: "barbershopFeature6Title",
+      descKey: "barbershopFeature6Desc",
+      highlights: ["barbershopFeature6H1", "barbershopFeature6H2", "barbershopFeature6H3", "barbershopFeature6H4"]
+    },
+    {
+      icon: Bell,
+      titleKey: "barbershopFeature7Title",
+      descKey: "barbershopFeature7Desc",
+      highlights: ["barbershopFeature7H1", "barbershopFeature7H2", "barbershopFeature7H3", "barbershopFeature7H4"]
+    },
+    {
+      icon: Package,
+      titleKey: "barbershopFeature8Title",
+      descKey: "barbershopFeature8Desc",
+      highlights: ["barbershopFeature8H1", "barbershopFeature8H2", "barbershopFeature8H3", "barbershopFeature8H4"]
     }
   ];
 
   const premiumFeatures = [
     {
-      icon: TrendingUp,
-      titleKey: "realEstatePremium1Title",
-      descKey: "realEstatePremium1Desc"
+      icon: Brain,
+      titleKey: "barbershopPremium1Title",
+      descKey: "barbershopPremium1Desc"
     },
     {
-      icon: Camera,
-      titleKey: "realEstatePremium2Title",
-      descKey: "realEstatePremium2Desc"
+      icon: CreditCard,
+      titleKey: "barbershopPremium2Title",
+      descKey: "barbershopPremium2Desc"
     },
     {
-      icon: Video,
-      titleKey: "realEstatePremium3Title",
-      descKey: "realEstatePremium3Desc"
+      icon: Package,
+      titleKey: "barbershopPremium3Title",
+      descKey: "barbershopPremium3Desc"
     },
     {
-      icon: Award,
-      titleKey: "realEstatePremium4Title",
-      descKey: "realEstatePremium4Desc"
+      icon: BarChart3,
+      titleKey: "barbershopPremium4Title",
+      descKey: "barbershopPremium4Desc"
     }
   ];
 
@@ -115,26 +110,21 @@ export default function RealEstatePage() {
       <Header />
       
       {/* Hero Section */}
-      <section 
-        className="relative py-24 px-6 overflow-hidden min-h-[500px] flex items-center"
-        style={{
-          backgroundImage: 'url(https://res.cloudinary.com/dpilz4p6g/image/upload/v1763654389/ChatGPT_Image_20_11_2025_15_59_04_jiuuwc.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-[#151513]/80 z-0" />
+      <section className="relative py-24 px-6 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#151513,#2A1A25,#151513)] bg-[length:300%_300%] animate-bgmove" />
         
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto text-center relative z-10 w-full"
+          className="max-w-6xl mx-auto text-center"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">{t("realEstateTitle")}</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t("realEstateSubtitle")}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Scissors className="w-12 h-12 text-[#B60238]" />
+            <h1 className="text-5xl md:text-6xl font-bold">{t("barbershopTitle")}</h1>
+          </div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-4">
+            {t("barbershopSubtitle")}
           </p>
         </motion.div>
       </section>
@@ -148,9 +138,9 @@ export default function RealEstatePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">{t("realEstateFeaturesTitle")}</h2>
+            <h2 className="text-4xl font-bold mb-4">{t("barbershopFeaturesTitle")}</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              {t("realEstateFeaturesSubtitle")}
+              {t("barbershopFeaturesSubtitle")}
             </p>
           </motion.div>
 
@@ -196,7 +186,7 @@ export default function RealEstatePage() {
       {/* Detailed Features Sections */}
       <section className="py-24 px-6 bg-[#151513]">
         <div className="max-w-7xl mx-auto">
-          {/* Property Catalog */}
+          {/* Professional Scheduling */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -207,21 +197,21 @@ export default function RealEstatePage() {
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-[#B60238]/10 flex items-center justify-center">
-                    <Search className="w-6 h-6 text-[#B60238]" />
+                    <Calendar className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold">{t("realEstateCatalogTitle")}</h3>
+                  <h3 className="text-3xl font-bold">{t("barbershopSchedulingTitle")}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  {t("realEstateCatalogDesc")}
+                  {t("barbershopSchedulingDesc")}
                 </p>
                 <div className="space-y-3">
                   {[
-                    "realEstateCatalogItem1",
-                    "realEstateCatalogItem2",
-                    "realEstateCatalogItem3",
-                    "realEstateCatalogItem4",
-                    "realEstateCatalogItem5",
-                    "realEstateCatalogItem6"
+                    "barbershopSchedulingItem1",
+                    "barbershopSchedulingItem2",
+                    "barbershopSchedulingItem3",
+                    "barbershopSchedulingItem4",
+                    "barbershopSchedulingItem5",
+                    "barbershopSchedulingItem6"
                   ].map((itemKey, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#B60238] flex-shrink-0" />
@@ -232,23 +222,30 @@ export default function RealEstatePage() {
               </div>
               <div className="bg-[#0a0a0a] rounded-2xl p-8 border border-[#2a2a2a]">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <Filter className="w-6 h-6 text-[#B60238]" />
-                    <span className="font-semibold">{t("realEstateFiltersTitle")}</span>
+                  <div className="flex items-center gap-4 mb-6">
+                    <Sparkles className="w-6 h-6 text-[#B60238]" />
+                    <span className="font-semibold">{t("barbershopSchedulingFeatures")}</span>
                   </div>
-                  <div className="grid grid-cols-2 gap-3">
-                    {["Type", "Price", "T1/T2/T3", "Zone", "Area", "Parking"].map((filter) => (
-                      <Badge key={filter} variant="outline" className="border-[#2a2a2a] text-gray-300">
-                        {filter}
-                      </Badge>
-                    ))}
+                  <div className="space-y-3 text-sm text-gray-300">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-[#B60238]" />
+                      <span>{t("barbershopSchedulingFeature1")}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-[#B60238]" />
+                      <span>{t("barbershopSchedulingFeature2")}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-[#B60238]" />
+                      <span>{t("barbershopSchedulingFeature3")}</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Intelligent Map */}
+          {/* Client History */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -259,49 +256,43 @@ export default function RealEstatePage() {
               <div className="order-2 lg:order-1 bg-[#0a0a0a] rounded-2xl p-8 border border-[#2a2a2a]">
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 mb-6">
-                    <Map className="w-6 h-6 text-[#B60238]" />
-                    <span className="font-semibold">{t("realEstateLocationScore")}</span>
+                    <User className="w-6 h-6 text-[#B60238]" />
+                    <span className="font-semibold">{t("barbershopHistoryTitle")}</span>
                   </div>
-                  <div className="space-y-3">
-                    {[
-                      { labelKey: "realEstateLocationTransport", score: 85 },
-                      { labelKey: "realEstateLocationSecurity", score: 90 },
-                      { labelKey: "realEstateLocationCommerce", score: 75 },
-                      { labelKey: "realEstateLocationLeisure", score: 80 }
-                    ].map((item) => (
-                      <div key={item.labelKey}>
-                        <div className="flex justify-between mb-1">
-                          <span className="text-sm text-gray-300">{t(item.labelKey)}</span>
-                          <span className="text-sm font-semibold">{item.score}/100</span>
-                        </div>
-                        <div className="w-full bg-[#151513] rounded-full h-2">
-                          <div 
-                            className="bg-[#B60238] h-2 rounded-full" 
-                            style={{ width: `${item.score}%` }}
-                          />
-                        </div>
-                      </div>
-                    ))}
+                  <div className="space-y-3 text-sm text-gray-300">
+                    <div className="p-3 bg-[#151513] rounded-lg">
+                      <div className="font-semibold mb-1">Last Cut: 15 days ago</div>
+                      <div className="text-xs text-gray-400">Low fade + Beard trim</div>
+                    </div>
+                    <div className="p-3 bg-[#151513] rounded-lg">
+                      <div className="font-semibold mb-1">Machine: #2 blade</div>
+                      <div className="text-xs text-gray-400">Products: Pomade, Oil</div>
+                    </div>
+                    <div className="p-3 bg-[#151513] rounded-lg">
+                      <div className="font-semibold mb-1">Preferences</div>
+                      <div className="text-xs text-gray-400">Sides shorter, top longer</div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-[#B60238]/10 flex items-center justify-center">
-                    <Map className="w-6 h-6 text-[#B60238]" />
+                    <User className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold">{t("realEstateMapTitle")}</h3>
+                  <h3 className="text-3xl font-bold">{t("barbershopHistoryTitle")}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  {t("realEstateMapDesc")}
+                  {t("barbershopHistoryDesc")}
                 </p>
                 <div className="space-y-3">
                   {[
-                    "realEstateMapItem1",
-                    "realEstateMapItem2",
-                    "realEstateMapItem3",
-                    "realEstateMapItem4",
-                    "realEstateMapItem5"
+                    "barbershopHistoryItem1",
+                    "barbershopHistoryItem2",
+                    "barbershopHistoryItem3",
+                    "barbershopHistoryItem4",
+                    "barbershopHistoryItem5",
+                    "barbershopHistoryItem6"
                   ].map((itemKey, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#B60238] flex-shrink-0" />
@@ -313,7 +304,7 @@ export default function RealEstatePage() {
             </div>
           </motion.div>
 
-          {/* AI Recommendations */}
+          {/* Digital Check-in */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -324,20 +315,19 @@ export default function RealEstatePage() {
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-[#B60238]/10 flex items-center justify-center">
-                    <Brain className="w-6 h-6 text-[#B60238]" />
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold">{t("realEstateAITitle")}</h3>
+                  <h3 className="text-3xl font-bold">{t("barbershopCheckinTitle")}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  {t("realEstateAIDesc")}
+                  {t("barbershopCheckinDesc")}
                 </p>
                 <div className="space-y-3">
                   {[
-                    "realEstateAIItem1",
-                    "realEstateAIItem2",
-                    "realEstateAIItem3",
-                    "realEstateAIItem4",
-                    "realEstateAIItem5"
+                    "barbershopCheckinItem1",
+                    "barbershopCheckinItem2",
+                    "barbershopCheckinItem3",
+                    "barbershopCheckinItem4"
                   ].map((itemKey, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#B60238] flex-shrink-0" />
@@ -348,27 +338,17 @@ export default function RealEstatePage() {
               </div>
               <div className="bg-[#0a0a0a] rounded-2xl p-8 border border-[#2a2a2a]">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Sparkles className="w-6 h-6 text-[#B60238]" />
-                    <span className="font-semibold">AI Analysis</span>
+                  <div className="flex items-center gap-4 mb-6">
+                    <MapPin className="w-6 h-6 text-[#B60238]" />
+                    <span className="font-semibold">{t("barbershopCheckinButton")}</span>
                   </div>
-                  <div className="space-y-3 text-sm text-gray-300">
-                    <div className="flex justify-between">
-                      <span>Properties viewed</span>
-                      <span className="text-[#B60238]">24</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Average price range</span>
-                      <span className="text-[#B60238]">€250k-€350k</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Preferred areas</span>
-                      <span className="text-[#B60238]">3 zones</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Match score</span>
-                      <span className="text-[#B60238] font-semibold">92%</span>
-                    </div>
+                  <Button className="w-full bg-[#B60238] hover:bg-[#9a0229] text-white text-lg py-6">
+                    📍 {t("barbershopCheckinButton")}
+                  </Button>
+                  <div className="mt-4 p-4 bg-[#151513] rounded-lg">
+                    <div className="text-sm text-gray-400 mb-2">{t("barbershopCheckinStatus")}</div>
+                    <div className="text-lg font-semibold text-[#B60238]">Position #3 in queue</div>
+                    <div className="text-sm text-gray-400 mt-2">Estimated wait: ~15 min</div>
                   </div>
                 </div>
               </div>
@@ -386,10 +366,10 @@ export default function RealEstatePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="bg-[#B60238] text-white mb-4">{t("realEstatePremiumTitle")}</Badge>
-            <h2 className="text-4xl font-bold mb-4">{t("realEstatePremiumTitle")}</h2>
+            <Badge className="bg-[#B60238] text-white mb-4">{t("barbershopPremiumTitle")}</Badge>
+            <h2 className="text-4xl font-bold mb-4">{t("barbershopPremiumTitle")}</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              {t("realEstatePremiumSubtitle")}
+              {t("barbershopPremiumSubtitle")}
             </p>
           </motion.div>
 
@@ -430,21 +410,21 @@ export default function RealEstatePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">{t("realEstateCTATitle")}</h2>
+            <h2 className="text-4xl font-bold mb-6">{t("barbershopCTATitle")}</h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              {t("realEstateCTADesc")}
+              {t("barbershopCTADesc")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="bg-[#B60238] hover:bg-[#9a0229] text-white text-lg px-8 py-6 rounded-xl"
               >
-                {t("realEstateCTAButton1")}
+                {t("barbershopCTAButton1")}
               </Button>
               <Button
                 variant="outline"
                 className="border-[#B60238] text-[#B60238] px-8 py-6 rounded-xl text-lg"
               >
-                {t("realEstateCTAButton2")}
+                {t("barbershopCTAButton2")}
               </Button>
             </div>
           </motion.div>

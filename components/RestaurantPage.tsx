@@ -110,20 +110,25 @@ export default function RestaurantPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#151513,#2A1A25,#151513)] bg-[length:300%_300%] animate-bgmove" />
+      <section 
+        className="relative py-24 px-6 overflow-hidden min-h-[500px] flex items-center"
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/dpilz4p6g/image/upload/v1763655994/ChatGPT_Image_20_11_2025_16_25_13_hev4qf.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-[#151513]/80 z-0" />
         
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto text-center"
+          className="max-w-6xl mx-auto text-center relative z-10 w-full"
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <UtensilsCrossed className="w-12 h-12 text-[#B60238]" />
-            <h1 className="text-5xl md:text-6xl font-bold">{t("restaurantTitle")}</h1>
-          </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">{t("restaurantTitle")}</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             {t("restaurantSubtitle")}
           </p>
         </motion.div>
